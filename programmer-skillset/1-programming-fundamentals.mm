@@ -123,7 +123,11 @@
 <node TEXT="loops in list" ID="ID_1698834509" CREATED="1361734053791" MODIFIED="1361734060684">
 <node TEXT="keeping set" ID="ID_975698376" CREATED="1361734075119" MODIFIED="1361734086124"/>
 <node TEXT="marking visited" ID="ID_411262708" CREATED="1361734088456" MODIFIED="1361734092811"/>
-<node TEXT="Floyd&#x2019;s (tortoise and hare)" ID="ID_79366619" CREATED="1361734093226" MODIFIED="1361734139737"/>
+<node TEXT="Floyd&#x2019;s (tortoise and hare)" ID="ID_79366619" CREATED="1361734093226" MODIFIED="1361798234191" TEXT_SHORTENED="true">
+<attribute NAME="detect" VALUE="t + 1, h + 2"/>
+<attribute NAME="loop len" VALUE="t, h + 1"/>
+<attribute NAME="find start" VALUE="t = head, t + 1, h = head + len, h + 1"/>
+</node>
 </node>
 </node>
 <node TEXT="tree" ID="ID_593430351" CREATED="1361713600943" MODIFIED="1361713606281">
