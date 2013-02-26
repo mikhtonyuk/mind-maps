@@ -1,7 +1,7 @@
 <map version="freeplane 1.2.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="Fundamentals" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1361728325357"><hook NAME="MapStyle">
-    <properties show_icon_for_attributes="true"/>
+    <properties show_icon_for_attributes="true" show_note_icons="true"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node">
@@ -103,7 +103,7 @@
 </node>
 <node TEXT="copy" ID="ID_1750691454" CREATED="1361821506735" MODIFIED="1361821508749"/>
 <node TEXT="reverse" ID="ID_624738104" CREATED="1361821509479" MODIFIED="1361821511725"/>
-<node TEXT="palindrome" ID="ID_798511162" CREATED="1361824268882" MODIFIED="1361824272749"/>
+<node TEXT="palindrome" ID="ID_798511162" CREATED="1361824268882" MODIFIED="1361911890158" LINK="http://www.geeksforgeeks.org/function-to-check-if-a-singly-linked-list-is-palindrome/"/>
 </node>
 <node TEXT="array/list" ID="ID_1613733756" CREATED="1361726663923" MODIFIED="1361734050347">
 <node TEXT="sort" ID="ID_1026904769" CREATED="1361713852710" MODIFIED="1361713863951">
@@ -134,7 +134,8 @@
 <node TEXT="maximum difference" ID="ID_175969290" CREATED="1361882548478" MODIFIED="1361882604074" TEXT_SHORTENED="true">
 <attribute NAME="keep max_diff and min elem" VALUE=""/>
 </node>
-<node TEXT="longest increasing subsequence" ID="ID_751993230" CREATED="1361825866256" MODIFIED="1361825875965">
+<node TEXT="next greater element" ID="ID_1641012700" CREATED="1361911366926" MODIFIED="1361911483724" LINK="http://www.geeksforgeeks.org/next-greater-element/"/>
+<node TEXT="longest increasing subsequence" ID="ID_751993230" CREATED="1361825866256" MODIFIED="1361902966309" LINK="http://www.geeksforgeeks.org/dynamic-programming-set-14-variations-of-lis/">
 <node TEXT="dp" ID="ID_1597087505" CREATED="1361873503251" MODIFIED="1361873626021" TEXT_SHORTENED="true">
 <attribute NAME="complexity" VALUE="O(n^2)"/>
 <attribute NAME="go from end to start" VALUE=""/>
@@ -148,9 +149,171 @@
 <attribute NAME="if a[i] &gt; last(s)" VALUE="append S"/>
 <attribute NAME="else" VALUE="last first s[] &gt; a[i] = a[i]"/>
 </node>
-<node TEXT="box stacking" ID="ID_707472661" CREATED="1361876509269" MODIFIED="1361876557521" TEXT_SHORTENED="true">
-<attribute NAME="sort and compare by base area" VALUE=""/>
 </node>
+<node TEXT="shuffle" ID="ID_234883321" CREATED="1361913618837" MODIFIED="1361913621752"/>
+<node TEXT="permutations" ID="ID_1741884992" CREATED="1361914247255" MODIFIED="1361914532347"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      def permutations(x):
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;import math
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;p = list(x)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;for _ in range(math.factorial(len(x)) - 2):
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;k = len(p) - 2
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;while p[k] &gt; p[k+1]:
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;k -= 1
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;t = k + 1
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;while t &lt; len(p) - 1 and p[t + 1] &gt; p[k]:
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;t += 1
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;yield list(p)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;tt = p[t]
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;p[t] = p[k]
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;p[k] = tt
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;reverse(p, k + 1)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;yield list(p)
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="combinations" ID="ID_970697435" CREATED="1361914250999" MODIFIED="1361914561287" TEXT_SHORTENED="true">
+<attribute NAME="init 00000111" VALUE="move lexicogr"/>
+<richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      def combinations(x, k):
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;assert k &lt;= len(x)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;p = [0 if len(x) - k &gt; i else 1 for i in range(len(x))]
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;right = len(x) - 1
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;while True:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;yield [x[i] for i in range(len(x)) if p[i]]
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;a = right - 1
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;while a &gt;= 0 and not(p[a] == 0 and p[a + 1] == 1):
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;a -= 1
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;#print a, p
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if a &lt; 0:
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;break
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;p[a] = 1
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;p[a + 1] = 0
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if a + 2 &lt; right:
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;reverse(p, a + 2, right + 1)
+    </p>
+  </body>
+</html>
+
+</richcontent>
 </node>
 </node>
 <node TEXT="tree" ID="ID_593430351" CREATED="1361713600943" MODIFIED="1361713606281">
@@ -164,7 +327,42 @@
 <node TEXT="port-order" ID="ID_155483075" CREATED="1361713631946" MODIFIED="1361713639789"/>
 </node>
 <node TEXT="breadth-first" ID="ID_515561166" CREATED="1361713642042" MODIFIED="1361713647173">
-<node TEXT="level-order" ID="ID_218686496" CREATED="1361713648689" MODIFIED="1361713652884"/>
+<node TEXT="level-order" ID="ID_218686496" CREATED="1361713648689" MODIFIED="1361914633926"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      def level_order(q = []):
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;while len(q):
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n = q.pop(0)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;print n.val
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if n.l:
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;q.append(n.l)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if n.r:
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;q.append(n.r)
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
 </node>
 </node>
 </node>
