@@ -131,7 +131,27 @@
 <node TEXT="selection" ID="ID_1629969712" CREATED="1361726675900" MODIFIED="1361726679184">
 <node TEXT="quick select" ID="ID_920875939" CREATED="1361726759451" MODIFIED="1361726803135"/>
 </node>
-<node TEXT="longest increasing subsequence" ID="ID_751993230" CREATED="1361825866256" MODIFIED="1361825875965"/>
+<node TEXT="maximum difference" ID="ID_175969290" CREATED="1361882548478" MODIFIED="1361882604074" TEXT_SHORTENED="true">
+<attribute NAME="keep max_diff and min elem" VALUE=""/>
+</node>
+<node TEXT="longest increasing subsequence" ID="ID_751993230" CREATED="1361825866256" MODIFIED="1361825875965">
+<node TEXT="dp" ID="ID_1597087505" CREATED="1361873503251" MODIFIED="1361873626021" TEXT_SHORTENED="true">
+<attribute NAME="complexity" VALUE="O(n^2)"/>
+<attribute NAME="go from end to start" VALUE=""/>
+<attribute NAME="maintain longest seq and next arrays" VALUE="init with 1 and -1"/>
+<attribute NAME="for each i scan all ahead with j" VALUE="extend with new biggest ls"/>
+</node>
+<node TEXT="O(n log n)" ID="ID_623743488" CREATED="1361874968532" MODIFIED="1361875143647" TEXT_SHORTENED="true">
+<attribute_layout NAME_WIDTH="44" VALUE_WIDTH="44"/>
+<attribute NAME="keep S" VALUE="= []"/>
+<attribute NAME="go forward by i" VALUE=""/>
+<attribute NAME="if a[i] &gt; last(s)" VALUE="append S"/>
+<attribute NAME="else" VALUE="last first s[] &gt; a[i] = a[i]"/>
+</node>
+<node TEXT="box stacking" ID="ID_707472661" CREATED="1361876509269" MODIFIED="1361876557521" TEXT_SHORTENED="true">
+<attribute NAME="sort and compare by base area" VALUE=""/>
+</node>
+</node>
 </node>
 <node TEXT="tree" ID="ID_593430351" CREATED="1361713600943" MODIFIED="1361713606281">
 <node TEXT="diameter of BT" ID="ID_823175978" CREATED="1361822627334" MODIFIED="1361822920465" TEXT_SHORTENED="true">
@@ -150,9 +170,11 @@
 </node>
 <node TEXT="graph" ID="ID_714515714" CREATED="1361713262088" MODIFIED="1361713267677">
 <node TEXT="spanning tree" ID="ID_246655522" CREATED="1361713268150" MODIFIED="1361713275577">
-<node TEXT="Kruskal&apos;s alg" ID="ID_514512993" CREATED="1361727821068" MODIFIED="1361728361941" LINK="#ID_894201988" TEXT_SHORTENED="true">
+<node TEXT="Kruskal&apos;s alg" ID="ID_514512993" CREATED="1361727821068" MODIFIED="1361875373702" LINK="#ID_894201988" TEXT_SHORTENED="true">
 <attribute NAME="min spanning tree" VALUE=""/>
 <attribute NAME="complexity" VALUE="O(E log E)"/>
+<attribute NAME="forest for each V" VALUE="for all E get min"/>
+<attribute NAME="if E connects forests - combine" VALUE="otherwise - discard"/>
 </node>
 </node>
 <node TEXT="shortest path" ID="ID_1650731634" CREATED="1361728741349" MODIFIED="1361728745955">
@@ -164,6 +186,11 @@
 </node>
 </node>
 <node TEXT="coloring" ID="ID_594757043" CREATED="1361728556688" MODIFIED="1361728560740"/>
+</node>
+<node TEXT="NP-complete" ID="ID_1281962218" CREATED="1361877414001" MODIFIED="1361877418486">
+<node TEXT="knapsack" ID="ID_1603098052" CREATED="1361877419267" MODIFIED="1361877423158"/>
+<node TEXT="traveling salesman" ID="ID_722664053" CREATED="1361877423673" MODIFIED="1361877431158"/>
+<node TEXT="Hamiltonian path" ID="ID_609665358" CREATED="1361877462487" MODIFIED="1361877465597"/>
 </node>
 </node>
 </node>
