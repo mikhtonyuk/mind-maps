@@ -129,7 +129,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="permutations" ID="ID_1741884992" CREATED="1361914247255" MODIFIED="1361972554811"><richcontent TYPE="NOTE">
@@ -207,7 +206,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="combinations" ID="ID_970697435" CREATED="1361914250999" MODIFIED="1361972509388" TEXT_SHORTENED="true">
@@ -281,12 +279,11 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
-<node TEXT="compare" ID="ID_1312903903" CREATED="1361969392179" MODIFIED="1361969394616">
-<node TEXT="edit distance (Levenshtein)" ID="ID_502132453" CREATED="1361969397523" MODIFIED="1361972408744"><richcontent TYPE="NOTE">
+<node TEXT="optimization" ID="ID_1312903903" CREATED="1361969392179" MODIFIED="1361998940878">
+<node TEXT="edit distance (Levenshtein)" ID="ID_502132453" CREATED="1361969397523" MODIFIED="1361994171575" TEXT_SHORTENED="true"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -346,6 +343,161 @@
     </p>
   </body>
 </html>
+</richcontent>
+<attribute NAME="O(nm)" VALUE=""/>
+</node>
+<node TEXT="0/1 knapsack" ID="ID_1535554040" CREATED="1361992985903" MODIFIED="1361994187995" TEXT_SHORTENED="true">
+<attribute NAME="O(nW)" VALUE=""/>
+<richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Courier New">def knapsack_0_1(max_weight, items): </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;v = [ [0 for _ in xrange(max_weight+1)] for _ in xrange(len(items))] </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;k = [ [0 for _ in xrange(max_weight+1)] for _ in xrange(len(items))] </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;for i, item in enumerate(items): </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;for w in xrange(max_weight+1): </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if w &gt;= item[0]: </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;above = v[i-1][w] if i &gt; 0 else 0 </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;cur = item[1] + (v[i-1][w-item[0]] if i &gt; 0 else 0) </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;v[i][w] = max(above, cur) </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;k[i][w] = 1 if cur &gt; above else 0 </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;sack = [] </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;w = max_weight </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;for i in xrange(len(items) - 1, -1, -1): </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if k[i][w]: </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;sack.append(items[i]) </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;w -= items[i][0] </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;return sack</font>
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="making change" ID="ID_1831917290" CREATED="1361998943777" MODIFIED="1362001498142" LINK="http://www.ccs.neu.edu/home/jaa/CSG713.04F/Information/Handouts/dyn_prog.pdf"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Courier New">def make_change(summ, coins): </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;C = [0 for _ in xrange(summ+1)] </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;D = [-1 for _ in xrange(summ+1)] </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;for s in xrange(1, summ+1): </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;min = None </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;d = None </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;for i, c in enumerate(coins): </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if c &lt;= s: </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if min is None or 1 + C[s - c] &lt; min: </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;min = 1 + C[s - c] </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;d = i </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;C[s] = min </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;D[s] = d </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;change = [] </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;while summ: </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;c = coins[D[summ]] </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;change.append(c) </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;summ -= c </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;return change</font>
+    </p>
+  </body>
+</html>
 
 </richcontent>
 </node>
@@ -395,7 +547,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
