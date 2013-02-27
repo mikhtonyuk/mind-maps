@@ -51,47 +51,7 @@
 </map_styles>
 </hook>
 <hook NAME="AutomaticEdgeColor" COUNTER="5"/>
-<node TEXT="Math" LOCALIZED_STYLE_REF="AutomaticLayout.level,1" POSITION="right" ID="ID_917356142" CREATED="1361712096864" MODIFIED="1361713039056">
-<edge COLOR="#ff0000"/>
-</node>
-<node TEXT="Data structures" LOCALIZED_STYLE_REF="AutomaticLayout.level,1" POSITION="right" ID="ID_893392978" CREATED="1361712115510" MODIFIED="1361728169587">
-<edge COLOR="#ff00ff"/>
-<node TEXT="array" ID="ID_668360023" CREATED="1361712503581" MODIFIED="1361712517677"/>
-<node TEXT="list" ID="ID_1164727645" CREATED="1361712518516" MODIFIED="1361712521952">
-<node TEXT="single-linked" ID="ID_1312910418" CREATED="1361712522379" MODIFIED="1361712526376"/>
-<node TEXT="double-linked" ID="ID_469775136" CREATED="1361712526881" MODIFIED="1361712533031"/>
-<node TEXT="skip list" ID="ID_847286120" CREATED="1361712787104" MODIFIED="1361712802116"/>
-</node>
-<node TEXT="heap" ID="ID_826924844" CREATED="1361712631212" MODIFIED="1361712635808">
-<node TEXT="min-heap" ID="ID_1182257786" CREATED="1361712638164" MODIFIED="1361712642344"/>
-<node TEXT="max-heap" ID="ID_840524942" CREATED="1361712642771" MODIFIED="1361712645104"/>
-</node>
-<node TEXT="tree" ID="ID_861427666" CREATED="1361712535898" MODIFIED="1361712538719">
-<node TEXT="binary tree" ID="ID_1537723736" CREATED="1361712540434" MODIFIED="1361712544695">
-<node TEXT="binary search tree" ID="ID_1126495923" CREATED="1361712545114" MODIFIED="1361712551023">
-<node TEXT="AVL tree" ID="ID_1813089766" CREATED="1361712553146" MODIFIED="1361712605561"/>
-<node TEXT="red-black tree" ID="ID_1266333027" CREATED="1361712606045" MODIFIED="1361712613409"/>
-</node>
-</node>
-<node TEXT="B-tree" ID="ID_1910364012" CREATED="1361714666139" MODIFIED="1361714668647"/>
-<node TEXT="trie (prefix tree)" ID="ID_750756933" CREATED="1361713824247" MODIFIED="1361713831436">
-<node TEXT="radix (compressed)" ID="ID_1913198623" CREATED="1361714080921" MODIFIED="1361730765042"/>
-</node>
-</node>
-<node TEXT="graph" ID="ID_1448586929" CREATED="1361712972815" MODIFIED="1361730802022">
-<node TEXT="representations" ID="ID_998084452" CREATED="1361714250648" MODIFIED="1361714341847">
-<node TEXT="adjacency list" ID="ID_155748511" CREATED="1361714342379" MODIFIED="1361714366192"/>
-<node TEXT="incidence list" ID="ID_1985134584" CREATED="1361714366954" MODIFIED="1361714435481"/>
-<node TEXT="adjacency matrix" ID="ID_1988256773" CREATED="1361714435884" MODIFIED="1361714441856"/>
-<node TEXT="incidence matrix" ID="ID_1765980665" CREATED="1361714442356" MODIFIED="1361714450648"/>
-</node>
-<node TEXT="disjoint set" ID="ID_894201988" CREATED="1361714527179" MODIFIED="1361714535646"/>
-</node>
-<node TEXT="hash" ID="ID_651024439" CREATED="1361714217529" MODIFIED="1361714221798">
-<node TEXT="bloom filter" ID="ID_1807603705" CREATED="1361714222368" MODIFIED="1361714228053"/>
-</node>
-</node>
-<node TEXT="Algorithms" LOCALIZED_STYLE_REF="AutomaticLayout.level,1" POSITION="right" ID="ID_1286106467" CREATED="1361712100711" MODIFIED="1361713039066">
+<node TEXT="Algorithms" LOCALIZED_STYLE_REF="AutomaticLayout.level,1" POSITION="right" ID="ID_1286106467" CREATED="1361712100711" MODIFIED="1361969579794">
 <edge COLOR="#0000ff"/>
 <node TEXT="list" ID="ID_1327582453" CREATED="1361821477387" MODIFIED="1361821479868">
 <node TEXT="cycle detection" ID="ID_1698834509" CREATED="1361734053791" MODIFIED="1361821493894">
@@ -130,7 +90,6 @@
 </node>
 <node TEXT="selection" ID="ID_1629969712" CREATED="1361726675900" MODIFIED="1361726679184">
 <node TEXT="quick select" ID="ID_920875939" CREATED="1361726759451" MODIFIED="1361726803135"/>
-</node>
 <node TEXT="maximum difference" ID="ID_175969290" CREATED="1361882548478" MODIFIED="1361882604074" TEXT_SHORTENED="true">
 <attribute NAME="keep max_diff and min elem" VALUE=""/>
 </node>
@@ -150,8 +109,9 @@
 <attribute NAME="else" VALUE="last first s[] &gt; a[i] = a[i]"/>
 </node>
 </node>
-<node TEXT="shuffle" ID="ID_234883321" CREATED="1361913618837" MODIFIED="1361913621752"/>
-<node TEXT="permutations" ID="ID_1741884992" CREATED="1361914247255" MODIFIED="1361914532347"><richcontent TYPE="NOTE">
+</node>
+<node TEXT="shuffle" ID="ID_234883321" CREATED="1361913618837" MODIFIED="1361913621752">
+<node TEXT="random" ID="ID_1346500127" CREATED="1361969082700" MODIFIED="1361972575702"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -159,77 +119,98 @@
   </head>
   <body>
     <p>
-      def permutations(x):
+      <font face="Courier New">for i from n - 1 downto 1 do </font>
     </p>
     <p>
-      &#160;&#160;&#160;&#160;import math
+      <font face="Courier New">&#160;&#160;&#160;&#160;j = random [0..i] </font>
     </p>
     <p>
-      &#160;&#160;&#160;&#160;p = list(x)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;for _ in range(math.factorial(len(x)) - 2):
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;k = len(p) - 2
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;while p[k] &gt; p[k+1]:
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;k -= 1
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;t = k + 1
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;while t &lt; len(p) - 1 and p[t + 1] &gt; p[k]:
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;t += 1
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;yield list(p)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;tt = p[t]
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;p[t] = p[k]
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;p[k] = tt
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;reverse(p, k + 1)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;yield list(p)
+      <font face="Courier New">&#160;&#160;&#160;&#160;exchange a[j] and a[i]</font>
     </p>
   </body>
 </html>
 
 </richcontent>
 </node>
-<node TEXT="combinations" ID="ID_970697435" CREATED="1361914250999" MODIFIED="1361914561287" TEXT_SHORTENED="true">
+<node TEXT="permutations" ID="ID_1741884992" CREATED="1361914247255" MODIFIED="1361972554811"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Courier New">def permutations(x): </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;import math </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;p = list(x) </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;for _ in range(math.factorial(len(x)) - 2): </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;k = len(p) - 2 </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;while p[k] &gt; p[k+1]: </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;k -= 1 </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;t = k + 1 </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;while t &lt; len(p) - 1 and p[t + 1] &gt; p[k]: </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;t += 1 </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;yield list(p) </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;tt = p[t] </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;p[t] = p[k] </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;p[k] = tt </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;reverse(p, k + 1) </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;yield list(p)</font>
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="combinations" ID="ID_970697435" CREATED="1361914250999" MODIFIED="1361972509388" TEXT_SHORTENED="true">
 <attribute NAME="init 00000111" VALUE="move lexicogr"/>
 <richcontent TYPE="NOTE">
 
@@ -239,81 +220,135 @@
   </head>
   <body>
     <p>
-      def combinations(x, k):
+      <font face="Courier New">def combinations(x, k): </font>
     </p>
     <p>
-      &#160;&#160;&#160;&#160;assert k &lt;= len(x)
+      <font face="Courier New">&#160;&#160;&#160;&#160;assert k &lt;= len(x) </font>
     </p>
     <p>
-      &#160;&#160;&#160;&#160;p = [0 if len(x) - k &gt; i else 1 for i in range(len(x))]
+      <font face="Courier New">&#160;&#160;&#160;&#160;p = [0 if len(x) - k &gt; i else 1 for i in range(len(x))] </font>
     </p>
     <p>
-      &#160;&#160;&#160;&#160;right = len(x) - 1
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;while True:
+      <font face="Courier New">&#160;&#160;&#160;&#160;right = len(x) - 1 </font>
     </p>
     <p>
       
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;yield [x[i] for i in range(len(x)) if p[i]]
+      <font face="Courier New">&#160;&#160;&#160;&#160;while True: </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;yield [x[i] for i in range(len(x)) if p[i]] </font>
     </p>
     <p>
       
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;a = right - 1
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;a = right - 1 </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;while a &gt;= 0 and not(p[a] == 0 and p[a + 1] == 1): </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;a -= 1 </font>
     </p>
     <p>
       
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;while a &gt;= 0 and not(p[a] == 0 and p[a + 1] == 1):
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if a &lt; 0: </font>
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;a -= 1
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;#print a, p
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;break </font>
     </p>
     <p>
       
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if a &lt; 0:
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;p[a] = 1 </font>
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;break
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;p[a] = 1
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;p[a + 1] = 0
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;p[a + 1] = 0 </font>
     </p>
     <p>
       
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if a + 2 &lt; right:
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if a + 2 &lt; right: </font>
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;reverse(p, a + 2, right + 1)
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;reverse(p, a + 2, right + 1)</font>
     </p>
   </body>
 </html>
 
 </richcontent>
+</node>
+</node>
+<node TEXT="compare" ID="ID_1312903903" CREATED="1361969392179" MODIFIED="1361969394616">
+<node TEXT="edit distance (Levenshtein)" ID="ID_502132453" CREATED="1361969397523" MODIFIED="1361972408744"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Courier New">def levinstein_distance(x, y): </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;di, dj = len(x) + 1, len(y) + 1 </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;d = [[None for _ in xrange(dj)] for _ in xrange(di)] </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;for i in xrange(di): </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;d[i][0] = i </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;for j in xrange(dj): </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;d[0][j] = j </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;for i in xrange(1, di): </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;for j in xrange(1, dj): </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;delete = d[i-1][j] + 1 </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;insert = d[i][j-1] + 1 </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;replace = d[i-1][j-1] + (2 if x[i-1] != y[j-1] else 0) </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;d[i][j] = min(delete, insert, replace) </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;return d[di-1][dj-1]</font>
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
 </node>
 </node>
 <node TEXT="tree" ID="ID_593430351" CREATED="1361713600943" MODIFIED="1361713606281">
@@ -324,10 +359,10 @@
 <node TEXT="depth-first" ID="ID_1145217456" CREATED="1361713615882" MODIFIED="1361713622950">
 <node TEXT="pre-order" ID="ID_69606017" CREATED="1361713623468" MODIFIED="1361713626723"/>
 <node TEXT="in-order" ID="ID_1783338683" CREATED="1361713627292" MODIFIED="1361713631496"/>
-<node TEXT="port-order" ID="ID_155483075" CREATED="1361713631946" MODIFIED="1361713639789"/>
+<node TEXT="post-order" ID="ID_155483075" CREATED="1361713631946" MODIFIED="1361969601795"/>
 </node>
 <node TEXT="breadth-first" ID="ID_515561166" CREATED="1361713642042" MODIFIED="1361713647173">
-<node TEXT="level-order" ID="ID_218686496" CREATED="1361713648689" MODIFIED="1361914633926"><richcontent TYPE="NOTE">
+<node TEXT="level-order" ID="ID_218686496" CREATED="1361713648689" MODIFIED="1361972595594"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -335,28 +370,28 @@
   </head>
   <body>
     <p>
-      def level_order(q = []):
+      <font face="Courier New">def level_order(q = []): </font>
     </p>
     <p>
-      &#160;&#160;&#160;&#160;while len(q):
+      <font face="Courier New">&#160;&#160;&#160;&#160;while len(q): </font>
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n = q.pop(0)
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;n = q.pop(0) </font>
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;print n.val
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;print n.val </font>
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if n.l:
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if n.l: </font>
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;q.append(n.l)
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;q.append(n.l) </font>
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if n.r:
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if n.r: </font>
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;q.append(n.r)
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;q.append(n.r)</font>
     </p>
   </body>
 </html>
@@ -389,6 +424,46 @@
 <node TEXT="knapsack" ID="ID_1603098052" CREATED="1361877419267" MODIFIED="1361877423158"/>
 <node TEXT="traveling salesman" ID="ID_722664053" CREATED="1361877423673" MODIFIED="1361877431158"/>
 <node TEXT="Hamiltonian path" ID="ID_609665358" CREATED="1361877462487" MODIFIED="1361877465597"/>
+</node>
+</node>
+<node TEXT="Math" LOCALIZED_STYLE_REF="AutomaticLayout.level,1" POSITION="left" ID="ID_917356142" CREATED="1361712096864" MODIFIED="1361713039056">
+<edge COLOR="#ff0000"/>
+</node>
+<node TEXT="Data structures" LOCALIZED_STYLE_REF="AutomaticLayout.level,1" POSITION="left" ID="ID_893392978" CREATED="1361712115510" MODIFIED="1361728169587">
+<edge COLOR="#ff00ff"/>
+<node TEXT="array" ID="ID_668360023" CREATED="1361712503581" MODIFIED="1361712517677"/>
+<node TEXT="list" ID="ID_1164727645" CREATED="1361712518516" MODIFIED="1361712521952">
+<node TEXT="single-linked" ID="ID_1312910418" CREATED="1361712522379" MODIFIED="1361712526376"/>
+<node TEXT="double-linked" ID="ID_469775136" CREATED="1361712526881" MODIFIED="1361712533031"/>
+<node TEXT="skip list" ID="ID_847286120" CREATED="1361712787104" MODIFIED="1361712802116"/>
+</node>
+<node TEXT="heap" ID="ID_826924844" CREATED="1361712631212" MODIFIED="1361712635808">
+<node TEXT="min-heap" ID="ID_1182257786" CREATED="1361712638164" MODIFIED="1361712642344"/>
+<node TEXT="max-heap" ID="ID_840524942" CREATED="1361712642771" MODIFIED="1361712645104"/>
+</node>
+<node TEXT="tree" ID="ID_861427666" CREATED="1361712535898" MODIFIED="1361712538719">
+<node TEXT="binary tree" ID="ID_1537723736" CREATED="1361712540434" MODIFIED="1361712544695">
+<node TEXT="binary search tree" ID="ID_1126495923" CREATED="1361712545114" MODIFIED="1361712551023">
+<node TEXT="AVL tree" ID="ID_1813089766" CREATED="1361712553146" MODIFIED="1361712605561"/>
+<node TEXT="red-black tree" ID="ID_1266333027" CREATED="1361712606045" MODIFIED="1361712613409"/>
+</node>
+</node>
+<node TEXT="B-tree" ID="ID_1910364012" CREATED="1361714666139" MODIFIED="1361714668647"/>
+<node TEXT="trie (prefix tree)" ID="ID_750756933" CREATED="1361713824247" MODIFIED="1361713831436">
+<node TEXT="radix (compressed)" ID="ID_1913198623" CREATED="1361714080921" MODIFIED="1361730765042"/>
+</node>
+</node>
+<node TEXT="graph" ID="ID_1448586929" CREATED="1361712972815" MODIFIED="1361730802022">
+<node TEXT="representations" ID="ID_998084452" CREATED="1361714250648" MODIFIED="1361714341847">
+<node TEXT="adjacency list" ID="ID_155748511" CREATED="1361714342379" MODIFIED="1361714366192"/>
+<node TEXT="incidence list" ID="ID_1985134584" CREATED="1361714366954" MODIFIED="1361714435481"/>
+<node TEXT="adjacency matrix" ID="ID_1988256773" CREATED="1361714435884" MODIFIED="1361714441856"/>
+<node TEXT="incidence matrix" ID="ID_1765980665" CREATED="1361714442356" MODIFIED="1361714450648"/>
+</node>
+<node TEXT="disjoint set" ID="ID_894201988" CREATED="1361714527179" MODIFIED="1361714535646"/>
+</node>
+<node TEXT="hash" ID="ID_651024439" CREATED="1361714217529" MODIFIED="1361714221798">
+<node TEXT="bloom filter" ID="ID_1807603705" CREATED="1361714222368" MODIFIED="1361714228053"/>
 </node>
 </node>
 </node>
