@@ -163,7 +163,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="merge sort" ID="ID_1586010456" CREATED="1361713885096" MODIFIED="1361727687976" VSHIFT="-10" TEXT_SHORTENED="true">
@@ -174,6 +173,10 @@
 </node>
 </node>
 <node TEXT="selection" ID="ID_1629969712" CREATED="1361726675900" MODIFIED="1361726679184">
+<node TEXT="search" ID="ID_612127054" CREATED="1362769523540" MODIFIED="1362769529423">
+<node TEXT="binary" ID="ID_528895007" CREATED="1362769529856" MODIFIED="1362769532531"/>
+<node TEXT="interpolation" ID="ID_1485574958" CREATED="1362769532998" MODIFIED="1362769551677" LINK="http://en.wikipedia.org/wiki/Interpolation_search"/>
+</node>
 <node TEXT="order statistics" ID="ID_1789263052" CREATED="1362129337163" MODIFIED="1362129341991">
 <node TEXT="k-th maximum" ID="ID_59969345" CREATED="1362129072483" MODIFIED="1362396315693"><richcontent TYPE="NOTE">
 
@@ -223,7 +226,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="all maximums up to k-th" ID="ID_30768277" CREATED="1362129090421" MODIFIED="1362129258035" TEXT_SHORTENED="true" LINK="http://www.geeksforgeeks.org/k-largestor-smallest-elements-in-an-array/">
@@ -451,7 +453,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -862,7 +863,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
