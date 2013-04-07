@@ -75,7 +75,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="Bridges" ID="ID_1051614429" CREATED="1362909032234" MODIFIED="1362909255383"><richcontent TYPE="NOTE">
@@ -90,7 +89,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="flooding" ID="ID_1450300857" CREATED="1362910932313" MODIFIED="1362910933884"/>
 <node TEXT="passive learning" ID="ID_299694319" CREATED="1362910661929" MODIFIED="1362910663749"/>
@@ -122,7 +120,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -211,7 +208,6 @@
     </div>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="vlans (IEEE 802.1Q)" ID="ID_571947728" CREATED="1362908740745" MODIFIED="1362908754092"/>
@@ -233,6 +229,11 @@
 </node>
 <node TEXT="MTU / PMTU discovery" ID="ID_1375168921" CREATED="1362828193776" MODIFIED="1362916824140"/>
 <node TEXT="NAT" ID="ID_440418293" CREATED="1362827853322" MODIFIED="1362916826344">
+<node TEXT="types" ID="ID_555330084" CREATED="1365090943141" MODIFIED="1365090949505">
+<node TEXT="destination NAT" ID="ID_699179972" CREATED="1365090957271" MODIFIED="1365091018420"/>
+<node TEXT="source NAT (+DNAT - full)" ID="ID_1357984419" CREATED="1365090973730" MODIFIED="1365091010831"/>
+<node TEXT="reverse NAT" ID="ID_584476559" CREATED="1365090999457" MODIFIED="1365091004265"/>
+</node>
 <node TEXT="types" ID="ID_394794243" CREATED="1362827860475" MODIFIED="1362828001904" LINK="http://en.wikipedia.org/wiki/Network_address_translation#Methods_of_Port_translation">
 <node TEXT="full cone" ID="ID_1922278358" CREATED="1362827863449" MODIFIED="1362827870452"/>
 <node TEXT="address-restricted cone" ID="ID_671681539" CREATED="1362827870898" MODIFIED="1362827883445"/>
@@ -242,6 +243,136 @@
 <node TEXT="TCP/UDP hole punching" ID="ID_634550168" CREATED="1362827936776" MODIFIED="1362827957468" LINK="http://www.brynosaurus.com/pub/net/p2pnat/"/>
 <node TEXT="STUN/TURN servers" ID="ID_1001632272" CREATED="1362828118108" MODIFIED="1362828123654">
 <node TEXT="NAT type detection" ID="ID_1385406180" CREATED="1362828124052" MODIFIED="1362828152822" LINK="http://www.jenkinssoftware.com/raknet/manual/nattypedetection.html"/>
+</node>
+</node>
+<node TEXT="Load balancing" ID="ID_1776809269" CREATED="1365091030505" MODIFIED="1365091035570">
+<node TEXT="Global" ID="ID_184538328" CREATED="1365157427921" MODIFIED="1365157430735">
+<node TEXT="Round-robin DNS" ID="ID_905612450" CREATED="1365157432792" MODIFIED="1365157439122"/>
+<node TEXT="ping-based" ID="ID_436253110" CREATED="1365157439685" MODIFIED="1365157443992"/>
+<node TEXT="DNS response race" ID="ID_143313314" CREATED="1365157444546" MODIFIED="1365157457505"/>
+</node>
+<node TEXT="Local" ID="ID_1433018461" CREATED="1365157471372" MODIFIED="1365157473097">
+<node TEXT="NAT" ID="ID_574950695" CREATED="1365091036277" MODIFIED="1365091048012">
+<node TEXT="DNAT" ID="ID_1589801489" CREATED="1365091049200" MODIFIED="1365091230290"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      receives traffic on VIP
+    </p>
+    <p>
+      translates destination MAC and IP address
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="SNAT (full)" ID="ID_1632098646" CREATED="1365091051846" MODIFIED="1365091286729"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      receives traffic on VIP
+    </p>
+    <p>
+      translates destination MAC and IP address
+    </p>
+    <p>
+      translates source MAC and ID to ones of LB device
+    </p>
+    <p>
+      + does not restricts topology
+    </p>
+    <p>
+      - hides source IP
+    </p>
+    <p>
+      - performance
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Direct server return" ID="ID_999151802" CREATED="1365091056980" MODIFIED="1365091355020"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      LB translates only destination MAC
+    </p>
+    <p>
+      all servers should have VIP of LB set as loopback interface address
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="Session persistence" ID="ID_1467685257" CREATED="1365091164850" MODIFIED="1365091170966">
+<node TEXT="IP-based" ID="ID_313424288" CREATED="1365091179563" MODIFIED="1365091391138"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      + simple
+    </p>
+    <p>
+      - megaproxy
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Cookie switching" ID="ID_929816948" CREATED="1365091183520" MODIFIED="1365093100547"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      does not work with SSL encryption
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="cookie-read" ID="ID_1361570901" CREATED="1365092966230" MODIFIED="1365092970657"/>
+<node TEXT="cookie-write" ID="ID_55725166" CREATED="1365092950486" MODIFIED="1365092965771"/>
+<node TEXT="cookie-rewrite" ID="ID_558039037" CREATED="1365092972731" MODIFIED="1365092978468"/>
+</node>
+<node TEXT="SSL session ID-based" ID="ID_700914089" CREATED="1365092984508" MODIFIED="1365093073581"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Works only for SSL &gt; v3.0 where session ID is unencrypted
+    </p>
+    <p>
+      Browser can reuse SSL ID accross multiple transactions
+    </p>
+    <p>
+      no certainty on how long it will reuse
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
 </node>
 </node>
 </node>
