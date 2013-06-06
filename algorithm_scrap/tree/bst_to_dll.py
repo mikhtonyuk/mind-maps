@@ -35,7 +35,7 @@ class BSToDLLTest(unittest.TestCase):
             while head:
                 if head.right:
                     self.assertEqual(head, head.right.left)
-                ret.append(head.val)
+                ret.append(head.value)
                 head = head.right
             return ret
 
