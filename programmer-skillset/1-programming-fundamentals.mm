@@ -1005,6 +1005,27 @@
 <font BOLD="true"/>
 <node TEXT="min-heap" ID="ID_1182257786" CREATED="1361712638164" MODIFIED="1361712642344"/>
 <node TEXT="max-heap" ID="ID_840524942" CREATED="1361712642771" MODIFIED="1361712645104"/>
+<node TEXT="operations" ID="ID_904935415" CREATED="1368466395868" MODIFIED="1368466399573">
+<node TEXT="build" ID="ID_662478608" CREATED="1368466400093" MODIFIED="1368466725115" TEXT_SHORTENED="true">
+<attribute NAME="O(n log n)" VALUE=""/>
+<richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      heapify in bottom-up manner
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="heapify (delete/bubble-down)" ID="ID_1963883953" CREATED="1368466734821" MODIFIED="1368466821691"/>
+<node TEXT="insert/bubble-up" ID="ID_385170516" CREATED="1368466822608" MODIFIED="1368466831862"/>
+</node>
 </node>
 <node TEXT="tree" ID="ID_861427666" CREATED="1361712535898" MODIFIED="1362068358066">
 <font BOLD="true"/>

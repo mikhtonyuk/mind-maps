@@ -50,7 +50,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="1"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="8"/>
 <node TEXT="Normalization" POSITION="right" ID="ID_1372368895" CREATED="1362826657621" MODIFIED="1362826757770">
 <edge COLOR="#ff0000"/>
 <node TEXT="First normal form (1NF)" ID="ID_1819718137" CREATED="1362826764842" MODIFIED="1362826792927"><richcontent TYPE="NOTE">
@@ -68,7 +68,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="Second normal form (2NF)" ID="ID_470483637" CREATED="1362826897909" MODIFIED="1362826926518"><richcontent TYPE="NOTE">
@@ -86,7 +85,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="Third normal form (3NF)" ID="ID_1699730609" CREATED="1362827087265" MODIFIED="1362827099353"><richcontent TYPE="NOTE">
@@ -101,7 +99,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="Boyce-Codd Normal Form (BCNF or 3.5NF)" ID="ID_860665628" CREATED="1362827251780" MODIFIED="1362827276016"><richcontent TYPE="NOTE">
@@ -116,7 +113,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="Fourth Normal Form (4NF)" ID="ID_1801385090" CREATED="1362827373433" MODIFIED="1362827391485"><richcontent TYPE="NOTE">
@@ -131,8 +127,20 @@
     </p>
   </body>
 </html>
-
 </richcontent>
+</node>
+</node>
+<node TEXT="CAP theorem" POSITION="left" ID="ID_1695914063" CREATED="1366749613679" MODIFIED="1366749626059">
+<edge COLOR="#0000ff"/>
+</node>
+<node TEXT="Consisten hashing" POSITION="left" ID="ID_359746739" CREATED="1366749648274" MODIFIED="1366749654924">
+<edge COLOR="#00ff00"/>
+<node TEXT="Virtual nodes" ID="ID_1307256668" CREATED="1366749656126" MODIFIED="1366749752533"/>
+</node>
+<node TEXT="Eventual consistency" POSITION="left" ID="ID_1442730326" CREATED="1366749730040" MODIFIED="1366749735410">
+<edge COLOR="#00007c"/>
+<node TEXT="Conflict resolution" ID="ID_1604542021" CREATED="1366749716961" MODIFIED="1366749730066">
+<node TEXT="Vector clocks" ID="ID_1641428594" CREATED="1366749662673" MODIFIED="1366749716987"/>
 </node>
 </node>
 </node>
