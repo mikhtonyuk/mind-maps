@@ -962,6 +962,38 @@
 </node>
 <node TEXT="graph" ID="ID_714515714" CREATED="1361713262088" MODIFIED="1362068358066">
 <font BOLD="true"/>
+<node TEXT="theory" ID="ID_1959263209" CREATED="1374326442947" MODIFIED="1374326448678">
+<node TEXT="Eulerian path" ID="ID_1273525399" CREATED="1374326526779" MODIFIED="1374326570842"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      is a trail in a graph which visits every edge exactly once
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="Hamiltonian path" ID="ID_1864131765" CREATED="1374326571674" MODIFIED="1374326607662"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      visits each vertex exactly once
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
 <node TEXT="spanning tree" ID="ID_246655522" CREATED="1361713268150" MODIFIED="1361713275577">
 <node TEXT="Kruskal&apos;s alg" ID="ID_514512993" CREATED="1361727821068" MODIFIED="1361875373702" LINK="#ID_894201988" TEXT_SHORTENED="true">
 <attribute NAME="min spanning tree" VALUE=""/>
@@ -1020,7 +1052,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="heapify (delete/bubble-down)" ID="ID_1963883953" CREATED="1368466734821" MODIFIED="1368466821691"/>
