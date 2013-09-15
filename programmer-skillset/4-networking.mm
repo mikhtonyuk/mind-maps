@@ -50,7 +50,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="2"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="3"/>
 <node TEXT="OSI model" POSITION="right" ID="ID_766728468" CREATED="1362909383533" MODIFIED="1362909445429">
 <edge COLOR="#7c007c"/>
 <node TEXT="1 - Physical" ID="ID_1897218787" CREATED="1362909387838" MODIFIED="1362909395265"/>
@@ -415,6 +415,94 @@
 </html>
 </richcontent>
 </node>
+</node>
+</node>
+</node>
+<node TEXT="Tail Latency Optimization" ID="ID_364643425" CREATED="1379240795019" MODIFIED="1379240805441">
+<node TEXT="Tail Latency sources" ID="ID_453841224" CREATED="1379241627406" MODIFIED="1379241633946">
+<node TEXT="Shared resources" ID="ID_1157354655" CREATED="1379241647622" MODIFIED="1379241650761"/>
+<node TEXT="Scheduled tasks" ID="ID_1565388763" CREATED="1379241651517" MODIFIED="1379241655691"/>
+<node TEXT="Queueing" ID="ID_1010238634" CREATED="1379241656238" MODIFIED="1379241682228"/>
+<node TEXT="Garbadge collection" ID="ID_825370330" CREATED="1379241682792" MODIFIED="1379241692779"/>
+<node TEXT="Energy management" ID="ID_1947882530" CREATED="1379241693432" MODIFIED="1379241714850"/>
+</node>
+<node TEXT="Within request" ID="ID_5967170" CREATED="1379240806388" MODIFIED="1379240963802" LINK="http://cacm.acm.org/magazines/2013/2/160173-the-tail-at-scale/fulltext">
+<node TEXT="Hedged requests" ID="ID_1904617083" CREATED="1379240819948" MODIFIED="1379240928508"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      A simple way to curb latency variability is to issue the same request to multiple replicas and use the results from whichever replica responds first. One such approach is to defer sending a secondary request until the first request has been outstanding for more than the 95th-percentile expected latency for this class of requests. This approach limits the additional load to approximately 5% while substantially shortening the latency tail.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="Tied request" ID="ID_295648456" CREATED="1379240836699" MODIFIED="1379241094971"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      A common source of variability is queueing delays on the server before a request begins execution. For many services, once a request is actually scheduled and begins execution, the variability of its completion time goes down substantially. We advocate enqueuing copies of a request in multiple servers simultaneously and allowing the servers to communicate updates on the status of these copies to each other. The simplest form of a tied request has the client send the request to two different servers, each tagged with the identity of the other server (&quot;tied&quot;). When a request begins execution, it sends a cancellation message to its counterpart. The corresponding request, if still enqueued in the other server, can be aborted immediately or deprioritized substantially.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node TEXT="Cross-request" ID="ID_794466093" CREATED="1379241272340" MODIFIED="1379241490966" LINK="http://cacm.acm.org/magazines/2013/2/160173-the-tail-at-scale/fulltext">
+<node TEXT="Micro-partitioning" ID="ID_1806558274" CREATED="1379241277115" MODIFIED="1379241375200"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      To combat imbalance, systems generate many more partitions than there are machines in the service, then do dynamic assignment and load balancing of these partitions to particular machines. Load balancing is then a matter of moving responsibility for one of these small partitions from one machine to another.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="Selective replication" ID="ID_840904208" CREATED="1379241283653" MODIFIED="1379241325824"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      An enhancement of the micro-partitioning scheme is to detect or even predict certain items that are likely to cause load imbalance and create additional replicas of these items. Load-balancing systems can then use the additional replicas to spread the load of these hot micro-partitions across multiple machines without having to actually move micro-partitions.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="Latency-induced probation" ID="ID_1155962302" CREATED="1379241430750" MODIFIED="1379241463607"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      By observing the latency distribution of responses from the various machines in the system, intermediate servers sometimes detect situations where the system performs better by excluding a particularly slow machine, or putting it on probation.
+    </p>
+  </body>
+</html>
+
+</richcontent>
 </node>
 </node>
 </node>
