@@ -188,13 +188,188 @@
 <node TEXT="POST" ID="ID_1778343657" CREATED="1365362521709" MODIFIED="1365362523267"/>
 <node TEXT="DELETE" ID="ID_1677850990" CREATED="1365362524203" MODIFIED="1365362525743"/>
 <node TEXT="HEAD" ID="ID_95011866" CREATED="1365362526122" MODIFIED="1365362529126"/>
+<node TEXT="OPTIONS" ID="ID_1810759139" CREATED="1381068750739" MODIFIED="1381068785132"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      OPTIONS /order/1234 HTTP 1.1
+    </p>
+    <p>
+      Host: starbucks.example.org
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      200 OK
+    </p>
+    <p>
+      Allow: GET, PUT
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node TEXT="Headers" ID="ID_1663874307" CREATED="1381069108697" MODIFIED="1381069112172">
+<node TEXT="Expect" ID="ID_1572422860" CREATED="1381069114920" MODIFIED="1381069135027"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Can be used for probing before making operation:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      PUT /order/1234 HTTP 1.1
+    </p>
+    <p>
+      Host: starbucks.example.com
+    </p>
+    <p>
+      Expect: 100-Continue
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      100 Continue
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="Addressing" ID="ID_818219713" CREATED="1381069164323" MODIFIED="1381069167254">
+<node TEXT="Host" ID="ID_824869591" CREATED="1381069139223" MODIFIED="1381069142043"/>
+<node TEXT="Referer" ID="ID_601714305" CREATED="1381069174058" MODIFIED="1381069196461"/>
+</node>
+<node TEXT="Caching" ID="ID_1144355528" CREATED="1381069157546" MODIFIED="1381069160767">
+<node TEXT="ETag" ID="ID_27132722" CREATED="1381069206914" MODIFIED="1381069209901"/>
+<node TEXT="If-Match" ID="ID_44124384" CREATED="1381069229713" MODIFIED="1381069232725"/>
+<node TEXT="Last-Modified" ID="ID_1380042468" CREATED="1381069311042" MODIFIED="1381069316085"/>
+<node TEXT="If-Unmodified-Since" ID="ID_32598969" CREATED="1381069210482" MODIFIED="1381069224509"/>
+</node>
 </node>
 <node TEXT="Result codes" ID="ID_1781469585" CREATED="1371398715847" MODIFIED="1371398719564">
-<node TEXT="1xx Informational" ID="ID_159007046" CREATED="1371398720293" MODIFIED="1371398737584"/>
-<node TEXT="2xx Success" ID="ID_63512976" CREATED="1371398738661" MODIFIED="1371398742936"/>
-<node TEXT="3xx Redirection" ID="ID_1993532572" CREATED="1371398743364" MODIFIED="1371398758072"/>
-<node TEXT="4xx Client error" ID="ID_337014990" CREATED="1371398758932" MODIFIED="1371398781983"/>
-<node TEXT="5xx Server error" ID="ID_1476617596" CREATED="1371398782592" MODIFIED="1371398800230"/>
+<node TEXT="1xx Informational" ID="ID_159007046" CREATED="1371398720293" MODIFIED="1371398737584">
+<node TEXT="100 Continue" ID="ID_1852816481" CREATED="1381068836911" MODIFIED="1381069129327"/>
+</node>
+<node TEXT="2xx Success" ID="ID_63512976" CREATED="1371398738661" MODIFIED="1371398742936">
+<node TEXT="200 OK" ID="ID_934449720" CREATED="1381068428985" MODIFIED="1381068435702"/>
+<node TEXT="201 Created" ID="ID_1493468639" CREATED="1381068454879" MODIFIED="1381068497537"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      We've just created a resource.
+    </p>
+    <p>
+      Location: header has new resource url
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="202 Accepted" ID="ID_547008464" CREATED="1381068505713" MODIFIED="1381068520732"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The service has accepted our request, and invites us to poll a URI in the Location header for the response. Great for asynchronous processing.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node TEXT="3xx Redirection" ID="ID_1993532572" CREATED="1371398743364" MODIFIED="1371398758072">
+<node TEXT="303 See Other" ID="ID_49989903" CREATED="1381068529208" MODIFIED="1381068545222"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      We need to interact with a different resource. We're probably still OK.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node TEXT="4xx Client error" ID="ID_337014990" CREATED="1371398758932" MODIFIED="1371398781983">
+<node TEXT="400 Bad Request" ID="ID_1239915250" CREATED="1381068553464" MODIFIED="1381068554587"/>
+<node TEXT="404 Not Found" ID="ID_1650149787" CREATED="1381068560686" MODIFIED="1381068562075"/>
+<node TEXT="409 Conflict" ID="ID_448832096" CREATED="1381068562655" MODIFIED="1381068588267"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      We tried to update the state of a resource, but the service isn't happy about it. We'll need to get the current state of the resource (either by checking the response entity body, or doing a GET) and figure out where to go from there.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="412 Precondition Failed" ID="ID_1499060469" CREATED="1381068598286" MODIFIED="1381068611976"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The request wasn't processed because an Etag, If-Match or similar guard header failed evaluation. We need to figure out how to make forward progress.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="417 Expectation Failed" ID="ID_163300746" CREATED="1381068620686" MODIFIED="1381068638923"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      You did the right thing by checking, but please don't try to send that request for real.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node TEXT="5xx Server error" ID="ID_1476617596" CREATED="1371398782592" MODIFIED="1371398800230">
+<node TEXT="500 Internal Server Error" ID="ID_1294401437" CREATED="1381068650589" MODIFIED="1381068654825"/>
+</node>
 </node>
 <node TEXT="Caching" ID="ID_108703163" CREATED="1365362532295" MODIFIED="1365362541606">
 <node TEXT="LastModified" ID="ID_1916607009" CREATED="1365362544361" MODIFIED="1365362553537"/>
@@ -439,7 +614,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="Tied request" ID="ID_295648456" CREATED="1379240836699" MODIFIED="1379241094971"><richcontent TYPE="NOTE">
@@ -454,7 +628,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -471,7 +644,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="Selective replication" ID="ID_840904208" CREATED="1379241283653" MODIFIED="1379241325824"><richcontent TYPE="NOTE">
@@ -486,7 +658,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="Latency-induced probation" ID="ID_1155962302" CREATED="1379241430750" MODIFIED="1379241463607"><richcontent TYPE="NOTE">
@@ -501,7 +672,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
